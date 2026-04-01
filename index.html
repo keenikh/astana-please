@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Cycle Hub | Экологическая Лаборатория</title>
+    <meta name="description" content="Инновационная экологическая лаборатория по переработке вторичного сырья и созданию дизайнерских изделий.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Background elements to make Glassmorphism visible -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#labs">Лаборатории</a></li>
+                    <li><a href="#statistics">Статистика</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="branch-container">
+                <!-- Using one of the branch images provided by user -->
+                <img src="./assets/Дизайн без названия.png" alt="Ветка" class="hero-branch" id="hero-branch">
+            </div>
+            
+            <div class="container hero-container">
+                <div class="glass-box hero-content">
+                    <h1 class="hero-title">RE-CYCLE HUB</h1>
+                    <p class="hero-subtitle">«Не выбрасывай историю — начни её заново»</p>
+                    <a href="#about" class="btn btn-primary">Узнать больше</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Founder Section -->
+        <section class="about" id="about">
+            <div class="container about-container">
+                <div class="about-card glass-box">
+                    <img src="./assets/фото мое вар2.JPG" alt="Кених Елизавета" class="founder-photo">
+                    <div class="founder-info">
+                        <p class="founder-text">
+                            Привет! Меня зовут Кених Елизавета, я ученица 11 класса ОШ №85 и Министр экологии нашей школы. Мой подход к экологии — это не просто разовые акции, а создание работающих систем.
+                            <br><br>
+                            Фундаментом для <strong>Re-Cycle Hub</strong> стал мой опыт участия в республиканском конкурсе TURAQTY JOL 6.0 от Федерации клубов ЮНЕСКО. Защищая там свой предыдущий проект, я поняла главное: устойчивое развитие невозможно без четких алгоритмов.
+                            <br><br>
+                            Сегодня я использую этот опыт, чтобы превратить нашу школу в инновационную площадку. Я сама спроектировала этот сайт и разработала Telegram-бота на Python, чтобы автоматизировать работу наших лабораторий. Моя цель как Министра — оставить школе не просто проект, а готовую IT-экосистему, где каждый ресурс получает второй шанс, а каждый ученик становится инженером будущего.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Как работает Re-Cycle Hub?</h2>
+                <p class="section-description">
+                    Наш проект — это умная цепочка превращений, где каждый этап прозрачен и важен. Все начинается с Системы Сбора (Eco-Drop): в ключевых точках школы установлены боксы, куда ученики сдают сырье. Но мы не просто собираем мусор — мы его оцифровываем.
+                    <br><br>
+                    Через Telegram-бота каждая заявка проходит модерацию, превращаясь в баллы (XP) для мейкера. После этого отсортированные ресурсы попадают в наши Лаборатории. Здесь «отходы» перестают быть таковыми, превращаясь в ценный материал для инженерного и художественного творчества. Мы создали среду, где технология сбора встречается с магией созидания.
+                </p>
+            </div>
+        </section>
+
+        <!-- Labs Section (Slider) -->
+        <section class="labs" id="labs">
+            <div class="container">
+                <h2 class="section-title">Наши Лаборатории</h2>
+                <!-- Swiper -->
+                <div class="swiper labs-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide glass-box lab-card">
+                            <h3 class="lab-title">TEXTILE LAB: Студия дизайна</h3>
+                            <p class="lab-desc">Лаборатория для тех, кто хочет превратить свой гардероб в манифест против «быстрой моды».</p>
+                            <ul class="lab-features">
+                                <li>✨ <strong>Bleach & Paint Art:</strong> Зона кастомизации. Создаем уникальные принты с помощью отбеливателя (рисование хлором) и специальных красок для ткани. Твоя одежда — твой холст.</li>
+                                <li>✨ <strong>Re-Fashion:</strong> Зона кроя. Перешиваем старую одежду в стильные и функциональные шопперы, сумки и новые элементы гардероба.</li>
+                            </ul>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide glass-box lab-card">
+                            <h3 class="lab-title">PAPER LAB: Целлюлозный коворкинг</h3>
+                            <p class="lab-desc">Зона работы с волокном, где старая бумага превращается в премиальный крафт и арт-объекты.</p>
+                            <ul class="lab-features">
+                                <li>✨ <strong>Литьё бумаги:</strong> Базовая зона. Проходим путь от создания бумажной пульпы до получения готового листа ручной работы с уникальной фактурой.</li>
+                                <li>✨ <strong>Sketchbook Studio:</strong> Зона переплета. Учимся превращать созданные листы в полноценные скетчбуки и блокноты для творчества.</li>
+                                <li>✨ <strong>Папье-маше:</strong> Зона объема. Используем бумажную массу для создания прочных и легких объемных фигур, масок и предметов интерьера.</li>
+                            </ul>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide glass-box lab-card">
+                            <h3 class="lab-title">PLASTIC LAB: Полимерный инжиниринг</h3>
+                            <p class="lab-desc">Здесь мы работаем с одним из самых сложных материалов современности, превращая его в инструмент творчества.</p>
+                            <ul class="lab-features">
+                                <li>✨ <strong>Эко-коучинг:</strong> Образовательная зона. Обсуждаем глобальные эко-тренды, разбираемся в маркировках и учимся осознанному потреблению. Знания — это первый шаг к переработке.</li>
+                                <li>✨ <strong>Пластик-арт:</strong> Зона ручного творчества. Создаем декоративные поделки и инсталляции из пластиковых элементов, даря вещам новую форму без термической обработки.</li>
+                                <li>✨ <strong>Термо-формовка:</strong> Техническая зона. Используем метод плавления (утюг + пергамент), чтобы превратить крошку из крышек в прочные авторские брелоки и аксессуары.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Heart Section -->
+        <section class="digital-heart">
+            <div class="container digital-heart-container">
+                <div class="digital-heart-text">
+                    <h2 class="section-title align-left">Digital Heart: Интеллектуальная экосистема управления</h2>
+                    <p class="digital-heart-desc">
+                        Telegram-бот «Re-Cycle Assistant» — это программное ядро проекта, разработанное на языке Python. Он выполняет роль связующего звена между физическими лабораториями и цифровым учетом, обеспечивая полную прозрачность и автоматизацию всех процессов.
+                    </p>
+                    
+                    <div class="digital-cards">
+                        <div class="digital-card glass-box interactive-card">
+                            <h4>1. Автоматизированный контроль безопасности</h4>
+                            <p>Безопасность — наш безусловный приоритет. Бот выступает в роли «цифрового инспектора»:</p>
+                            <ul>
+                                <li>Допуск к работе в Plastic, Paper или Textile Lab невозможен без прохождения специализированного тестирования по ТБ.</li>
+                                <li>Система анализирует ответы в реальном времени. Только после 100% успешного прохождения квиза пользователю открывается доступ к записи на мастер-классы конкретной зоны.</li>
+                                <li>Все сертификаты и статусы безопасности хранятся в базе данных и привязаны к ID пользователя.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="digital-card glass-box interactive-card">
+                            <h4>2. Цифровая верификация ресурсов (Eco-Drop)</h4>
+                            <p>Мы превратили хаотичный сбор мусора в контролируемую логистическую систему:</p>
+                            <ul>
+                                <li>Каждая единица сданного сырья проходит через модуль модерации. Ученик отправляет данные (тип материала, вес, фото) через интерфейс бота.</li>
+                                <li>Каждая заявка проверяется администратором проекта. Это исключает накрутку баллов и гарантирует, что в лаборатории попадает только качественное, чистое сырье.</li>
+                                <li>История вкладов каждого участника сохраняется, формируя глобальную статистику экологического следа школы.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="digital-card glass-box interactive-card">
+                            <h4>3. Система грейдов и мотивации</h4>
+                            <p>Проект использует современные механики удержания (retention) и развития сообщества:</p>
+                            <ul>
+                                <li>За каждое действие (сдача сырья, прохождение ТБ, создание изделия) пользователь получает XP (очки опыта).</li>
+                                <li>Система предусматривает рост от Junior-мейкера (новичка) до Senior-коуча (наставника, имеющего право проводить мастер-классы).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://t.me/EcoCommunityHub_bot" target="_blank" class="btn btn-accent pulse-animation" style="margin-top: 40px;">
+                        Перейти в Telegram-бота <span>→</span>
+                    </a>
+                </div>
+                <div class="digital-heart-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="./assets/bot-screenshot.png.jpeg" alt="Скриншот Telegram-бота Re-Cycle Hub" class="bot-screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics" id="statistics">
+            <img src="./assets/Дизайн без названия.png" alt="Декор" class="decor-branch branch-left">
+            <div class="container">
+                <h2 class="section-title">Наши результаты в цифрах</h2>
+                <div class="stats-grid">
+                    <!-- Stat Card 1 -->
+                    <div class="stat-card glass-box interactive-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number counter" data-target="10.2">0</span>
+                            <span class="stat-unit">кг</span>
+                        </div>
+                        <h4 class="stat-title">Собрано ресурсов</h4>
+                        <p class="stat-desc">Количество вторичного сырья (пластик 02, макулатура, текстиль), которое успешно прошло верификацию через систему Eco-Drop и было направлено на переработку в лаборатории.</p>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="stat-card glass-box interactive-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number counter" data-target="35">0</span>
+                            <span class="stat-unit"></span>
+                        </div>
+                        <h4 class="stat-title">Допуски по безопасности</h4>
+                        <p class="stat-desc">Ученики ОШ №85, которые успешно прошли интерактивные квизы в Telegram-боте, подтвердили знание техники безопасности и получили «Цифровой допуск» к работе с оборудованием.</p>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="stat-card glass-box interactive-card">
+                        <div class="stat-icon">🎨</div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number counter" data-target="27">0</span>
+                            <span class="stat-unit"></span>
+                        </div>
+                        <h4 class="stat-title">Готовых изделий</h4>
+                        <p class="stat-desc">Авторские продукты (дизайнерские шопперы, скетчбуки из «живой» бумаги, брелоки из переплавленного пластика), созданные мейкерами в ходе воркшопов и коучингов.</p>
+                    </div>
+                    <!-- Stat Card 4 -->
+                    <div class="stat-card glass-box interactive-card">
+                        <div class="stat-icon">🤖</div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number counter" data-target="156">0</span>
+                            <span class="stat-unit">+</span>
+                        </div>
+                        <h4 class="stat-title">Цифровой след</h4>
+                        <p class="stat-desc">Суммарное количество обработанных команд, транзакций опыта (XP) и записей на мастер-классы внутри Telegram-бота "Re-Cycle Assistant".</p>
+                        <div class="live-data-badge">
+                            <span class="pulse-dot"></span> Live Data
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Галерея работ</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="./assets/галерея 1.png" alt="Галерея 1" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 2.png" alt="Галерея 2" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 3.png" alt="Галерея 3" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 4.png" alt="Галерея 4" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 5.png" alt="Галерея 5" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 6.jpeg" alt="Галерея 6" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 7.jpeg" alt="Галерея 7" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 8.jpeg" alt="Галерея 8" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 9.png" alt="Галерея 9" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 10.png" alt="Галерея 10" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 11.jpeg" alt="Галерея 11" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 12.png" alt="Галерея 12" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 13.png" alt="Галерея 13" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 14.png" alt="Галерея 14" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 15.jpeg" alt="Галерея 15" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 16.png" alt="Галерея 16" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 17.png" alt="Галерея 17" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 18.png" alt="Галерея 18" loading="lazy"></div>
+                    <div class="gallery-item"><img src="./assets/галерея 19.png" alt="Галерея 19" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">RE-CYCLE HUB</div>
+                <p class="footer-tagline">Не выбрасывай историю — начни её заново.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Re-Cycle Hub. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main Script -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
