@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer to trigger counting when stats section is visible
     const statsSection = document.getElementById('statistics');
     if (statsSection) {
+        // Use a 0.1 threshold to ensure it triggers on mobile when sections take up more than the viewport
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             if (entry.isIntersecting && !hasAnimated) {
@@ -86,8 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasAnimated = true;
                 observer.unobserve(statsSection);
             }
-        }, { threshold: 0.5 });
+        }, { threshold: 0.1 });
         
         observer.observe(statsSection);
+    }
+
+    /* --- Mobile Menu --- */
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+    
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
     }
 });
