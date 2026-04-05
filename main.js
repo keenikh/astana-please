@@ -47,31 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const animateCounters = () => {
         counters.forEach(counter => {
-            counter.innerText = '0';
+            const targetText = counter.getAttribute('data-target');
+            const isFloat = targetText.includes('.');
+            const target = parseFloat(targetText.replace(',', '.'));
+            
+            let current = 0;
+            const duration = 2000; // 2 seconds for animation
+            const frameDuration = 1000 / 60; // 60 fps
+            const totalFrames = Math.round(duration / frameDuration);
+            const increment = target / totalFrames;
+            
+            let frame = 0;
+            
             const updateCounter = () => {
-                const targetText = counter.getAttribute('data-target');
-                // Check if the target is a float instead of integer (e.g., 10.2)
-                const isFloat = targetText.includes('.');
-                const target = parseFloat(targetText.replace(',', '.'));
+                frame++;
+                current += increment;
                 
-                // Get current value
-                const current = parseFloat(counter.innerText.replace(',', '.'));
-                
-                // Determine increment step
-                const increment = target / 50; 
-                
-                if (current < target) {
-                    let next = current + increment;
+                if (frame < totalFrames) {
                     if (isFloat) {
-                        counter.innerText = next.toFixed(1).replace('.', ',');
+                        counter.innerText = current.toFixed(1).replace('.', ',');
                     } else {
-                        counter.innerText = Math.ceil(next);
+                        counter.innerText = Math.floor(current);
                     }
-                    setTimeout(updateCounter, 30);
+                    requestAnimationFrame(updateCounter);
                 } else {
                     counter.innerText = targetText.replace('.', ',');
                 }
             };
+            
             updateCounter();
         });
     }
@@ -79,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer to trigger counting when stats section is visible
     const statsSection = document.getElementById('statistics');
     if (statsSection) {
-        // Use a 0.1 threshold to ensure it triggers on mobile when sections take up more than the viewport
+        // Reduced threshold to 0.05 for better mobile reliability
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             if (entry.isIntersecting && !hasAnimated) {
@@ -87,7 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasAnimated = true;
                 observer.unobserve(statsSection);
             }
-        }, { threshold: 0.1 });
+        }, { 
+            threshold: 0.05,
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before it hits the viewport
+        });
         
         observer.observe(statsSection);
     }
